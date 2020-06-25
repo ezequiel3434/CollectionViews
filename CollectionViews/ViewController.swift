@@ -58,11 +58,12 @@ extension ViewController: UICollectionViewDataSource {
 // MARK: -UICollectionViewDelegate
 extension ViewController: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath ) {
+        
         print("\(indexPath.section) -> \(indexPath.row) \(myCountries[indexPath.row]) ")
     }
 }
 
-// MARK: -UICollectionViewDelegateFlowLayout
+
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 0 {
